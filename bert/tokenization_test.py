@@ -21,6 +21,7 @@ import tempfile
 
 import tokenization
 import tensorflow as tf
+tf = tf.compat.v1
 
 
 class TokenizationTest(tf.test.TestCase):
