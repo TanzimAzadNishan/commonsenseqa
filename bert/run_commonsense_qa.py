@@ -491,7 +491,7 @@ def create_model(
   with tf.variable_scope("loss"):
     if is_training:
       # I.e., 0.1 dropout
-      output_layer = tf_main.nn.dropout(output_layer, keep_prob=0.9)
+      output_layer = tf_main.nn.dropout(output_layer, rate=0.9)
 
     logits = tf.reshape(
       tf.matmul(output_layer, softmax_weights),
