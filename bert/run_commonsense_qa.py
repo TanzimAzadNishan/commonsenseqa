@@ -482,7 +482,7 @@ def create_model(
       use_one_hot_embeddings=use_one_hot_embeddings
   ).get_pooled_output()
 
-  hidden_size = output_layer.shape[-1].value
+  hidden_size = output_layer.shape[-1]
 
   softmax_weights = tf.get_variable(
       "softmax_weights", [hidden_size, 1],
